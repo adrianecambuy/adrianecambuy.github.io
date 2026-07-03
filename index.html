@@ -33,21 +33,33 @@
       <p class="subtitle">Lifestyle • Maternidade • Beleza</p>
 
       <p class="descricao">
-        Conteúdo autêntico que transforma produtos em experiências reais.
+        Conteúdo autêntico que conecta marcas a pessoas reais através de experiências verdadeiras.
       </p>
 
       <div class="buttons">
-        <a href="#contato" class="btn-primary">Falar comigo</a>
 
-        <a href="https://wa.me/55SEUNUMEROAQUI" target="_blank" class="btn-secondary">
+        <a class="btn-primary"
+           href="https://wa.me/message/FEQ2BBKIXH4PC1"
+           target="_blank"
+           onclick="trackClick('whatsapp_hero')">
           WhatsApp
         </a>
+
+        <a class="btn-secondary"
+           href="https://instagram.com/adricambuy"
+           target="_blank"
+           onclick="trackClick('instagram_hero')">
+          Instagram
+        </a>
+
       </div>
     </div>
 
-    <div class="hero-image">
-      <!-- TROQUE AQUI PELO NOME REAL DA SUA FOTO -->
-      <img src="adriane.jpg" alt="Adriane Cambuy">
+    <!-- GALERIA -->
+    <div class="hero-gallery">
+      <img src="foto1.jpg" alt="Adriane 1">
+      <img src="foto2.jpg" alt="Adriane 2">
+      <img src="foto3.jpg" alt="Adriane 3">
     </div>
 
   </div>
@@ -59,8 +71,7 @@
     <h2>Sobre mim</h2>
 
     <p>
-      Sou criadora de conteúdo UGC, especializada em vídeos autênticos que conectam marcas com pessoas reais.
-      Trabalho com lifestyle, maternidade e beleza, trazendo leveza e verdade em cada produção.
+      Sou criadora de conteúdo UGC especializada em vídeos autênticos que geram conexão e conversão para marcas.
     </p>
   </div>
 </section>
@@ -74,18 +85,18 @@
     <div class="grid">
 
       <div class="card">
-        <h3>Vídeos UGC</h3>
-        <p>Conteúdos naturais para marcas que querem conversão.</p>
+        <h3>UGC Vídeos</h3>
+        <p>Conteúdos naturais para campanhas e redes sociais.</p>
       </div>
 
       <div class="card">
-        <h3>Reviews de produtos</h3>
-        <p>Testes reais com narrativa emocional.</p>
+        <h3>Reviews</h3>
+        <p>Testes reais com storytelling emocional.</p>
       </div>
 
       <div class="card">
-        <h3>Conteúdo para redes</h3>
-        <p>Reels prontos para anúncios e campanhas.</p>
+        <h3>Ads Criativos</h3>
+        <p>Vídeos focados em conversão para anúncios.</p>
       </div>
 
     </div>
@@ -108,12 +119,26 @@
   </div>
 </section>
 
-<!-- CTA -->
+<!-- LEADS -->
 <section class="cta">
   <div class="container">
-    <h2>Disponível para parcerias</h2>
-    <p>Conteúdos reais que conectam marcas e pessoas.</p>
-    <a href="#contato" class="btn-primary">Solicitar mídia kit</a>
+
+    <h2>Vamos trabalhar juntos?</h2>
+
+    <form class="lead-form"
+          action="mailto:adrianec.cambuy@gmail.com"
+          method="POST"
+          enctype="text/plain"
+          onsubmit="trackClick('form_submit')">
+
+      <input type="text" name="nome" placeholder="Seu nome" required>
+      <input type="email" name="email" placeholder="Seu e-mail" required>
+      <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
+
+      <button type="submit">Enviar proposta</button>
+
+    </form>
+
   </div>
 </section>
 
@@ -123,8 +148,11 @@
 
     <h2>Contato</h2>
 
-    <p><strong>E-mail:</strong> adrianec.cambuy@gmail.com</p>
-    <p><strong>Instagram:</strong> @adricambuy</p>
+    <p>E-mail: <a href="mailto:adrianec.cambuy@gmail.com">adrianec.cambuy@gmail.com</a></p>
+
+    <p>Instagram: <a href="https://instagram.com/adricambuy" target="_blank">@adricambuy</a></p>
+
+    <p>TikTok: <a href="https://tiktok.com/@adricambuy" target="_blank">@adricambuy</a></p>
 
   </div>
 </section>
