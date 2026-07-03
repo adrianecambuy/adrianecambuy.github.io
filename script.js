@@ -1,4 +1,4 @@
-// Scroll reveal (Framer-like smooth animation)
+// Scroll reveal suave
 const elements = document.querySelectorAll('.reveal');
 
 const observer = new IntersectionObserver(entries => {
@@ -12,7 +12,7 @@ entry.target.classList.add('active');
 elements.forEach(el => observer.observe(el));
 
 
-// Smooth scroll for nav
+// Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 anchor.addEventListener("click", function(e){
 e.preventDefault();
