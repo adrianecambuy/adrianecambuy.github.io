@@ -1,31 +1,54 @@
-document.addEventListener("DOMContentLoaded", () => {
+// ==========================
+// CURSOR CUSTOM
+// ==========================
 
-  const links = document.querySelectorAll("a");
+const cursor = document.querySelector('.cursor');
 
-  links.forEach(link => {
-    link.addEventListener("click", () => {
-      trackClick("link_click");
-    });
-  });
-
+document.addEventListener('mousemove', (e) => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
 });
 
-// 📊 SISTEMA DE RASTREIO
-function trackClick(action) {
+// ==========================
+// SCROLL FADE IN
+// ==========================
 
-  let data = JSON.parse(localStorage.getItem("tracking")) || [];
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = "translateY(0)";
+        }
+    });
+});
 
-  data.push({
-    action: action,
-    time: new Date().toISOString()
-  });
+document.querySelectorAll('section, .service-card, .step').forEach(el => {
+    el.style.opacity = 0;
+    el.style.transform = "translateY(40px)";
+    el.style.transition = "0.8s ease";
+    observer.observe(el);
+});
 
-  localStorage.setItem("tracking", JSON.stringify(data));
+// ==========================
+// FAQ ACCORDION
+// ==========================
 
-  console.log("📊 Clique registrado:", action);
-}
+document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const answer = btn.nextElementSibling;
+        answer.style.maxHeight = answer.style.maxHeight ? null : "200px";
+    });
+});
 
-// 🔍 VER DADOS (debug)
-function getTracking() {
-  return JSON.parse(localStorage.getItem("tracking")) || [];
-}
+// ==========================
+// AUTO SLIDER CONTROL (extra smooth)
+// ==========================
+
+let slideIndex = 0;
+const slides = document.querySelector('.slides');
+
+setInterval(() => {
+    slideIndex++;
+    if(slideIndex > 2) slideIndex = 0;
+    slides.style.transform = `translateX(-${slideIndex * 100}%)`;
+}, 4000);
