@@ -1,51 +1,13 @@
-// Animação ao rolar a página
+function trackClick(action) {
 
-const sections = document.querySelectorAll("section");
+  let data = JSON.parse(localStorage.getItem("tracking")) || [];
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-    }
-  });
-}, {
-  threshold: 0.15
-});
-
-sections.forEach((section) => {
-  observer.observe(section);
-});
-
-// Destaque do menu
-
-const navLinks = document.querySelectorAll("nav a");
-
-window.addEventListener("scroll", () => {
-
-  let current = "";
-
-  sections.forEach((section) => {
-
-    const sectionTop = section.offsetTop - 120;
-
-    if (scrollY >= sectionTop) {
-
-      current = section.getAttribute("id");
-
-    }
-
+  data.push({
+    action: action,
+    time: new Date().toISOString()
   });
 
-  navLinks.forEach((link) => {
+  localStorage.setItem("tracking", JSON.stringify(data));
 
-    link.classList.remove("active");
-
-    if (link.getAttribute("href") === "#" + current) {
-
-      link.classList.add("active");
-
-    }
-
-  });
-
-});
+  console.log("📊 Click:", action);
+}  
