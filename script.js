@@ -1,15 +1,13 @@
-let index = 0;
-const slides = document.querySelectorAll(".slide");
+function trackClick(action) {
 
-function showSlide() {
-  slides.forEach(s => s.classList.remove("active"));
-  slides[index].classList.add("active");
+  let data = JSON.parse(localStorage.getItem("tracking")) || [];
 
-  index++;
+  data.push({
+    action: action,
+    time: new Date().toISOString()
+  });
 
-  if (index >= slides.length) {
-    index = 0;
-  }
+  localStorage.setItem("tracking", JSON.stringify(data));
+
+  console.log("📊 Click:", action);
 }
-
-setInterval(showSlide, 3000);
