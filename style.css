@@ -208,78 +208,56 @@ background:white;
 @media(max-width:900px){
 
 header{
-
 flex-direction:column;
 gap:15px;
-
 }
 
 nav{
-
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
-
 }
 
 nav a{
-
 margin:8px;
-
 }
 
 .hero{
-
 flex-direction:column-reverse;
 text-align:center;
-
 }
 
 .hero h1{
-
 font-size:42px;
-
 }
 
 .hero p{
-
 font-size:18px;
-
 }
 
-. buttons{
-
+.buttons{
 justify-content:center;
 flex-wrap:wrap;
-
 }
 
 .hero-image img{
+max-width:320px;
+}
+}
 
-max-width:320px;/* ANIMAÇÕES */
-
+/* ANIMAÇÕES */
 section{
-
 opacity:0;
 transform:translateY(60px);
 transition:all .8s ease;
-
 }
 
 section.show{
-
 opacity:1;
 transform:translateY(0);
-
 }
 
 nav a.active{
-
 color:#b08d72;
 font-weight:600;
-
-}
-
-}
-
 }
