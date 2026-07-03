@@ -225,6 +225,15 @@ footer {
 
   .hero-image img {
     width: 260px;
-    height: 340px;
+    height: 340px;.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
   }
 }
