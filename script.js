@@ -1,13 +1,28 @@
 function trackClick(action) {
+  try {
+    // pega dados existentes
+    let data = JSON.parse(localStorage.getItem("tracking")) || [];
 
-  let data = JSON.parse(localStorage.getItem("tracking")) || [];
+    // garante limite (evita travar navegador)
+    if (data.length > 100) {
+      data = data.slice(-100);
+    }
 
-  data.push({
-    action: action,
-    time: new Date().toISOString()
-  });
+    // evento estruturado (padrão profissional)
+    const event = {
+      action: action,
+      page: window.location.pathname,
+      time: new Date().toISOString(),
+      userAgent: navigator.userAgent
+    };
 
-  localStorage.setItem("tracking", JSON.stringify(data));
+    data.push(event);
 
-  console.log("📊 Click:", action);
+    localStorage.setItem("tracking", JSON.stringify(data));
+
+    console.log("📊 Event tracked:", event);
+
+  } catch (error) {
+    console.error("Tracking error:", error);
+  }
 }
