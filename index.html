@@ -1,22 +1,36 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
 
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  gtag('js', new Date());
-  gtag('config', 'G-PLYTS62V3W');
-</script>
+  <title>Adriane Cambuy | UGC Creator</title>
+
+  <meta name="description" content="UGC Creator especializada em lifestyle, maternidade e beleza. Conteúdo autêntico que conecta marcas e pessoas.">
+
+  <!-- GOOGLE ANALYTICS -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLYTS62V3W"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+
+    gtag('js', new Date());
+    gtag('config', 'G-PLYTS62V3W');
+  </script>
+
+  <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
 <header>
   <div class="container header">
-    <h1>Adriane Cambuy</h1>
+
+    <h1 class="logo">Adriane Cambuy</h1>
 
     <nav>
       <a href="#sobre">Sobre</a>
@@ -24,57 +38,67 @@
       <a href="#servicos">Serviços</a>
       <a href="#contato">Contato</a>
     </nav>
+
   </div>
 </header>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero" id="inicio">
 
   <div class="hero-text">
+
     <h2>UGC Creator</h2>
+
     <p>Lifestyle • Maternidade • Beleza</p>
 
     <p class="desc">
-      Conteúdo autêntico que transforma produtos em experiências reais.
+      Conteúdo autêntico que transforma produtos em experiências reais e desejáveis.
     </p>
 
-    <!-- BOTÕES CORRIGIDOS -->
     <div class="buttons">
 
       <a class="btn"
          href="https://wa.me/message/FEQ2BBKIXH4PC1"
-         target="_blank"
-         onclick="trackClick('whatsapp_hero')">
+         target="_blank">
         WhatsApp
       </a>
 
       <a class="btn-outline"
-         href="mailto:adrianec.cambuy@gmail.com"
-         onclick="trackClick('email_hero')">
+         href="mailto:adrianec.cambuy@gmail.com">
         E-mail
       </a>
 
-    </div>
-  </div>
-  <a href="media-kit.pdf" download class="btn-outline">
-  Baixar Media Kit
-</a>
+      <a class="btn-outline"
+         href="media-kit.pdf"
+         download>
+        Media Kit
+      </a>
 
-  <!-- FOTO 3D -->
- <div class="hero-photo">
-  <img src="foto1.jpg" alt="Adriane Cambuy">
-</div>
+    </div>
+
+  </div>
+
+  <!-- FOTO HERO -->
+  <div class="hero-photo">
+    <img src="foto1.jpg" alt="Adriane Cambuy - UGC Creator">
+  </div>
+
 </section>
+
 <!-- SOBRE -->
 <section id="sobre" class="section">
+
   <h2>Sobre mim</h2>
+
   <p>
     Criadora de conteúdo UGC especializada em vídeos autênticos que geram conexão e conversão entre marcas e pessoas.
   </p>
+
 </section>
 
 <!-- PORTFÓLIO -->
 <section id="portfolio" class="section dark">
+
   <h2>Portfólio</h2>
 
   <div class="grid">
@@ -82,10 +106,12 @@
     <div class="card">Vídeo em breve</div>
     <div class="card">Vídeo em breve</div>
   </div>
+
 </section>
 
 <!-- SERVIÇOS -->
 <section id="servicos" class="section">
+
   <h2>Serviços</h2>
 
   <div class="grid">
@@ -93,10 +119,19 @@
     <div class="card">Reviews</div>
     <div class="card">Ads Criativos</div>
   </div>
+
+</section>
+
+<!-- BRANDS -->
+<section class="brands">
+
+  <p>Já criei conteúdo para marcas em campanhas UGC</p>
+
 </section>
 
 <!-- CONTATO -->
 <section id="contato" class="section dark">
+
   <h2>Contato</h2>
 
   <p>📩 Email: <a href="mailto:adrianec.cambuy@gmail.com">adrianec.cambuy@gmail.com</a></p>
@@ -104,26 +139,25 @@
   <p>📸 Instagram: <a href="https://instagram.com/adricambuy" target="_blank">@adricambuy</a></p>
 
   <p>🎵 TikTok: <a href="https://tiktok.com/@adricambuy" target="_blank">@adricambuy</a></p>
+
   <form action="https://formsubmit.co/adrianec.cambuy@gmail.com" method="POST">
 
-  <input type="text" name="nome" placeholder="Seu nome" required>
+    <input type="text" name="nome" placeholder="Seu nome" required>
 
-  <input type="email" name="email" placeholder="Seu e-mail" required>
+    <input type="email" name="email" placeholder="Seu e-mail" required>
 
-  <textarea name="mensagem" placeholder="Sua mensagem"></textarea>
+    <textarea name="mensagem" placeholder="Sua mensagem"></textarea>
 
-  <button type="submit">Enviar proposta</button>
+    <button type="submit">Enviar proposta</button>
 
-</form>
+  </form>
+
 </section>
-<section class="brands">
-  <p>Já criei conteúdo para marcas em campanhas UGC</p>
-</section>
+
 <!-- WHATSAPP FLUTUANTE -->
 <a class="whatsapp-float"
    href="https://wa.me/message/FEQ2BBKIXH4PC1"
-   target="_blank"
-   onclick="trackClick('whatsapp_float')">
+   target="_blank">
    💬
 </a>
 
