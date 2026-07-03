@@ -1,28 +1,51 @@
-function trackClick(action) {
-  try {
-    // pega dados existentes
-    let data = JSON.parse(localStorage.getItem("tracking")) || [];
+// Animação ao rolar a página
 
-    // garante limite (evita travar navegador)
-    if (data.length > 100) {
-      data = data.slice(-100);
+const sections = document.querySelectorAll("section");
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+}, {
+  threshold: 0.15
+});
+
+sections.forEach((section) => {
+  observer.observe(section);
+});
+
+// Destaque do menu
+
+const navLinks = document.querySelectorAll("nav a");
+
+window.addEventListener("scroll", () => {
+
+  let current = "";
+
+  sections.forEach((section) => {
+
+    const sectionTop = section.offsetTop - 120;
+
+    if (scrollY >= sectionTop) {
+
+      current = section.getAttribute("id");
+
     }
 
-    // evento estruturado (padrão profissional)
-    const event = {
-      action: action,
-      page: window.location.pathname,
-      time: new Date().toISOString(),
-      userAgent: navigator.userAgent
-    };
+  });
 
-    data.push(event);
+  navLinks.forEach((link) => {
 
-    localStorage.setItem("tracking", JSON.stringify(data));
+    link.classList.remove("active");
 
-    console.log("📊 Event tracked:", event);
+    if (link.getAttribute("href") === "#" + current) {
 
-  } catch (error) {
-    console.error("Tracking error:", error);
-  }
-}
+      link.classList.add("active");
+
+    }
+
+  });
+
+});
