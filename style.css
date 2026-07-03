@@ -61,12 +61,33 @@ header {
   white-space: nowrap;
 }
 /* IMAGEM HERO */
-.hero-image img {
-  width: 420px;
-  height: 600px;
+.hero-photo-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  perspective: 1200px;
+}
+
+/* CARD 3D */
+.hero-photo-wrapper img {
+  width: 360px;
+  height: 520px;
   object-fit: cover;
-  border-radius: 30px;
-  box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+
+  border-radius: 28px;
+
+  transform: rotateY(-10deg) rotateX(6deg);
+
+  box-shadow:
+    0 30px 60px rgba(0,0,0,0.55),
+    0 10px 30px rgba(202, 166, 255, 0.25);
+
+  transition: 0.5s ease;
+}
+
+/* HOVER PREMIUM */
+.hero-photo-wrapper img:hover {
+  transform: rotateY(0deg) rotateX(0deg) scale(1.03);
 }
 
 /* SEÇÕES */
