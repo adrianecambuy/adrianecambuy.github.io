@@ -304,11 +304,12 @@ font-weight:500;
 color:#7b55d4;
 }
 
-.hero-photo{
-position:relative;
-display:flex;
-justify-content:center;
-align-items:center;
+.hero-photo img{
+    width:520px;
+    max-width:100%;
+    height:auto;
+    object-fit:contain;
+    display:block;
 }
 
 .photo-bg{
