@@ -422,6 +422,15 @@ section { padding: 4rem 0; }
   background: #f0ebfa;
   display: block;
 }
+.video-card img{
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+.video-card{
+  overflow: hidden;
+}
 
 .video-card p {
   padding: 1rem 1.1rem;
